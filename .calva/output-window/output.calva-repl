@@ -31,3 +31,10 @@ clj꞉learn_deps.core꞉> (-main)
 Goodbye World!
 nil
 clj꞉learn_deps.core꞉> 
+; Evaluating file: core.clj
+nil
+clj꞉learn_deps.core꞉> 
+#function[learn-deps.core/-main]
+clj꞉learn_deps.core꞉> (-main)
+#function[clojure.lang.AFunction/1]
+clj꞉learn_deps.core꞉> 
