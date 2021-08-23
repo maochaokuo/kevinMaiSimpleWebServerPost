@@ -1,7 +1,9 @@
-(ns learn-deps.core)
+(ns learn_deps.core)
 
 (defn -main []
       (println "Goodbye World!"))
 
 (comment
-  (-main))
+  (-main
+   ;; => #function[learn-deps.core/-main]
+))
