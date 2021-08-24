@@ -11,7 +11,8 @@
      :headers {"Content-Type" "application/json"}
      :body (json/encode {:hello "world"})
      }
-    ))
+    )
+    (route/not-found "Not Found"))
 
 (defn start-server []
   (println "starting server on port 4000")
