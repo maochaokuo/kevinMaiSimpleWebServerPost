@@ -14,3 +14,19 @@ clj -A:run
 ## localhost:4000/json
 
 ## http://localhost:4000/json/id
+http://localhost:4000/json/anything
+
+## http://localhost:4000/json/
+POST:
+```json
+{
+    "request": "hello"
+}
+```
+response:
+```json
+{
+    "json": true,
+    "response": "hello"
+}
+```
