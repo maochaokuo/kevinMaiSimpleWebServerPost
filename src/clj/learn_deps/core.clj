@@ -16,7 +16,13 @@
       (GET "/" []
         {:status 200
          :headers {"Content-Type" "application/json"}
-         :body (json/encode {:json true})}))
+         :body (json/encode {:json true})})
+      (GET "/:id" [id]
+        {:status 200
+         :headers {"Content-Type" "application/json"}
+         :body (json/encode {:json true
+                             :id id})})
+      )
     (route/not-found "Not Found"))
 
 (defn start-server []

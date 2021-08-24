@@ -12,3 +12,5 @@ clj -A:run
 ## not found
 
 ## localhost:4000/json
+
+## http://localhost:4000/json/id
