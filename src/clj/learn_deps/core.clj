@@ -5,7 +5,13 @@
             [cheshire.core :as json]))
 
 (defroutes app
-  (GET "/" [] "Hello world"))
+  (GET "/" [] 
+    ;"Hello world"
+    {:status 200
+     :headers {"Content-Type" "application/json"}
+     :body (json/encode {:hello "world"})
+     }
+    ))
 
 (defn -main []
   ;    (println "Goodbye World!")
