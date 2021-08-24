@@ -6,3 +6,5 @@ but does not work
 ```shell
 clj -A:run
 ```
+
+## start and stop server

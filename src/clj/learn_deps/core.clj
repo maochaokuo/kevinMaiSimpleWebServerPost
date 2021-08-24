@@ -13,10 +13,31 @@
      }
     ))
 
+(defn start-server []
+  (println "starting server on port 4000")
+  (run-server app {:port 4000}))
+
 (defn -main []
   ;    (println "Goodbye World!")
-  (run-server app {:port 4000})
+  ;(run-server app {:port 4000})
+  (start-server)
   )
+
+;; interactive dev
+
+(defonce server (atom nil))
+
+(defn start []
+  (reset! server (start-server)))
+
+(defn stop []
+  (when @server
+    (@server :timeout 100)))  
+
+(defn restart [] 
+  (stop)
+  (start))    
+;;  
 
 (comment
   (-main
