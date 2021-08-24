@@ -1,5 +1,5 @@
 (ns learn_deps.core
-  (:require [compojure.core :refer [defroutes GET POST]]
+  (:require [compojure.core :refer [defroutes GET POST context]]
             [compojure.route :as route]
             [org.httpkit.server :refer [run-server]]
             [cheshire.core :as json]))
@@ -12,6 +12,11 @@
      :body (json/encode {:hello "world"})
      }
     )
+    (context "/json" []
+      (GET "/" []
+        {:status 200
+         :headers {"Content-Type" "application/json"}
+         :body (json/encode {:json true})}))
     (route/not-found "Not Found"))
 
 (defn start-server []

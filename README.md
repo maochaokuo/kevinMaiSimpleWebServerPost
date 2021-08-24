@@ -10,3 +10,5 @@ clj -A:run
 ## start and stop server
 
 ## not found
+
+## localhost:4000/json
