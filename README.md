@@ -30,3 +30,10 @@ response:
     "response": "hello"
 }
 ```
+
+## post request to string
+```clojure
+(POST "/agents" request
+  (let [body (json/read-str (slurp (:body request)))]
+    (println body)))
+```
